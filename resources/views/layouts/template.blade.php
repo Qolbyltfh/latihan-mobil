@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>MATIR - Index</title>
+  <title>MATIR - @yield('title')</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -65,14 +65,14 @@
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#package">Package</a></li>
-          <li><a href="#team">Trainer</a></li>
-          <li><a href="#vehicle">Vehicle</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="landing-page#hero">Home</a></li>
+          <li><a href="landing-page#about">About</a></li>
+          <li><a href="landing-page#services">Services</a></li>
+          <li><a href="landing-page#package">Package</a></li>
+          <li><a href="landing-page#team">Trainer</a></li>
+          <li><a href="landing-page#vehicle">Vehicle</a></li>
+          <li><a href="{{ url ('blog')}}">Blog</a></li>
+          <li><a href="landing-page#contact">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -83,6 +83,7 @@
   </header><!-- End Header -->
   <!-- End Header -->
 
+  @hasSection('hero')
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero">
     <div class="container position-relative">
@@ -140,6 +141,7 @@
     </div>
   </section>
   <!-- End Hero Section -->
+  @endif
 
   <main id="main">
     @yield('main')
@@ -228,6 +230,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
+    @hasSection('contact')
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
@@ -268,6 +271,7 @@
 
       </div>
     </div>
+    @endif
 
     <div class="container mt-4">
       <div class="copyright">

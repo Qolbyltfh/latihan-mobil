@@ -1,5 +1,9 @@
 @extends('layouts.template')
 
+@section('title', 'Home')
+
+@section('hero', 'true')
+
 @section('main')
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
@@ -342,3 +346,5 @@
       </div>
     </section><!-- End Vehicle Section -->
 @endsection
+
+@section('contact', 'true')

@@ -16,6 +16,11 @@ class LandingPageController extends Controller
         return view('landing_page');
     }
 
+    public function blog()
+    {
+        return view('blog');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

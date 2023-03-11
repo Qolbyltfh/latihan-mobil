@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('landing-page', [LandingPageController::class, 'index']);
+Route::get('blog', [LandingPageController::class, 'blog']);
 
 Auth::routes();
 
